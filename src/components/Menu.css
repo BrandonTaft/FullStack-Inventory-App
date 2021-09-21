@@ -1,0 +1,21 @@
+
+
+#container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(34, 87, 34);
+    color: white;
+    font-size: xx-large;
+    padding: 3%
+}
+.inactive{
+    color: white;
+    text-decoration: none;
+    
+}
+@media (max-device-width:600px) {
+    #container{
+        display: none;
+    }
+}
+
