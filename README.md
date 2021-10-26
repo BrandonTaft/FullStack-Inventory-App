@@ -1,5 +1,5 @@
 # FullStack-Inventory-App
-This is a Full Stack App made using Javascript and NodeJS with a PostgreSQL database
+This App Was Created With 
 <a href="https://www.linkedin.com/in/brandonmtaft">
   <img  width="80" height="80" src="https://github.com/BrandonTaft/BrandonTaft/blob/main/assets/javascript-original.svg" />
   </a> 
