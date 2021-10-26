@@ -24,3 +24,6 @@ This is a Full Stack App made using Javascript and NodeJS with a PostgreSQL data
   <a href="https://www.linkedin.com/in/brandonmtaft">
   <img  width="80" height="80" src="https://github.com/BrandonTaft/BrandonTaft/blob/main/assets/nodejs-original.svg" />
   </a>
+   <a href="https://www.linkedin.com/in/brandonmtaft">
+  <img  width="80" height="80" src="https://github.com/BrandonTaft/BrandonTaft/blob/main/assets/html-original.svg" />
+  </a>
