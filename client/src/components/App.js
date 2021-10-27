@@ -2,7 +2,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import AllGames from './AllGames';
-import Login from './Login';
+
 
 
 
@@ -19,7 +19,16 @@ function App() {
   useEffect(() => { getAllGames() }, [])
 
   const getAllGames = () => {
-    fetch('http://localhost:8080/api/videogames')
+
+    //gets token out of storage
+  const token = localStorage.getItem('jsonwebtoken')
+
+    fetch('http://localhost:8080/api/videogames',{
+            method: 'GET', 
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
       .then(response => response.json())
       .then(games => {
         console.log(games)

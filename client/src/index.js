@@ -5,12 +5,10 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import  BaseLayout  from './components/BaseLayout';
-import Menu from './components/Menu';
 import Login from './components/Login';
-import AllGames from './components/AllGames';
 import AddGame from './components/AddGame';
-import Register from './components/Register'
-import Navbar from './components/Navbar'
+import Register from './components/Register';
+import Logout from './components/Logout';
 
 
 ReactDOM.render (
@@ -18,9 +16,10 @@ ReactDOM.render (
     <BrowserRouter>
       <BaseLayout>
         <Switch>
-        <Route exact path = "/login" component = {Login} />
+        <Route exact path = "/" component = {Login} />
+        <Route exact path = "/logout" component = {Logout} />
         <Route exact path = "/register"component = {Register} />
-        <Route exact path = "/" component = {App} />
+        <Route exact path = "/home" component = {App} />
         <Route exact path = "/addGame" component = {AddGame} />
         {/* <Route exact path = "/navbar" component = {Navbar} /> */}
         </Switch>

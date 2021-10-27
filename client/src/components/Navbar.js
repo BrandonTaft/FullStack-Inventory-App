@@ -21,16 +21,17 @@ function Navbar() {
 
     return (
         <nav className="navBar">
-          <div id= 'buttonBox'>  
+          <div id= 'NavBarBackground'>  
             <button onClick={handleToggle}>{navbarOpen ? (
                 <MdClose style={{ color: "#fff", width: "40px", height: "40px" }} />) : (
                 <FiMenu style={{ color: "#7b7b7b", width: "40px", height: "40px" }} />
             )}</button>
             </div>
             <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-                <NavLink to="/login" activeClassName="active-link" onClick={() => closeMenu()} exact>Login</NavLink>
-                <NavLink to="/" activeClassName="active-link" onClick={() => closeMenu()} exact>AllGames</NavLink>
-                <NavLink to="/AddGame" activeClassName="active-link" onClick={() => closeMenu()} exact>AddGames</NavLink>
+               
+                <NavLink to="/"id="a" activeClassName="active-link" onClick={() => closeMenu()} exact>Logout</NavLink>
+                <NavLink to="/home"id="a" activeClassName="active-link" onClick={() => closeMenu()} exact>Home</NavLink>
+                <NavLink to="/AddGame"id="a" activeClassName="active-link" onClick={() => closeMenu()} exact>AddGame</NavLink>
 
 
 

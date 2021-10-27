@@ -33,6 +33,7 @@
   .menuNav.showMenu {
     background: green;
     width: 100%;
+    height: fit-content;
   }
   
   a {

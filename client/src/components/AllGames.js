@@ -7,6 +7,8 @@ function AllGames(props) {
 
     //const [list, updateList] = useState(games)
 
+    
+
     const handleGameDelete = (game) => {
         fetch(`http://localhost:8080/api/videogames/${game.id}`, {
           method: 'DELETE'

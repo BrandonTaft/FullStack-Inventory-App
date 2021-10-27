@@ -30,7 +30,7 @@ function AddGame(props) {
         }).then(response => response.json())
         .then(result => {
             if(result.success) {
-                props.history.push('/')
+                props.history.push('/home')
                 }
         })
     }                                                         

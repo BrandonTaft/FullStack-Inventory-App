@@ -28,7 +28,8 @@ function Login(props) {
         }) .then(response => response.json())
         .then(result => {
             if(result.success == true) {
-                props.history.push('/')
+                localStorage.setItem('jsonwebtoken', result.token) 
+                props.history.push('/home')
                 console.log(result)
             }
              
