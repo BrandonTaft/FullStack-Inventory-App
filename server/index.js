@@ -3,6 +3,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const jwt = require('jsonwebtoken')
+const authenticate = require('./middlewares/authMiddleware')
 
 const bcrypt = require('bcryptjs')
 
@@ -10,48 +11,10 @@ const models = require('./models')
 
 const salt = 10
 
+require('dotenv').config()
+
 app.use(cors())
 app.use(express.json())
-
-
-app.get('/api/videogames', async (req, res) => {
-    let games = await models.Games.findAll()
-    res.json(games)
-})
-
-app.post('/api/videogames', async (req, res) => {
-    const title = req.body.title
-    const genre = req.body.genre
-    const description = req.body.description
-    //const gameID = req.body.gameID
-
-    const game = models.Games.build({
-        title: title,
-        genre: genre,
-        description: description
-        //gameID: gameID
-    })
-
-    let savedGame = await game.save()
-    if (savedGame != null) {
-        res.json({ success: true })
-    }
-})
-
-app.delete('/api/videogames/:gameId', (req, res) => {
-
-    const gameId = parseInt(req.params.gameId)
-
-    models.Games.destroy({
-        where: {
-            id: gameId
-        }
-    }).then(_ => {
-        res.json({ success: true })
-    })
-
-})
-
 
 
 app.post('/api/register', async (req, res) => {
@@ -109,7 +72,7 @@ app.post('/api/login', async (req, res) => {
     if (user != null) {
         bcrypt.compare(password, user.password, (error, result) => {
             if (result) {
-                const token = jwt.sign({ username: user.name }, "SECRET KEY")
+                const token = jwt.sign({ username: user.name }, process.env.JWT_SECRET_KEY)
                 res.json({ success: true, token: token })
             }else {
                 res.json({ success: false, message: 'Not Authenticated' })
@@ -121,12 +84,48 @@ app.post('/api/login', async (req, res) => {
     
 })
 
-// app.get('/accounts', (req.res) => {
-//     const username = req.body.username
-//     const password = req.body.password
 
-//     res.json()
-// })
+
+
+app.get('/api/videogames', authenticate,  async (req, res) => {
+    let games = await models.Games.findAll()
+    res.json(games)
+})
+
+app.post('/api/videogames',async (req, res) => {
+    const title = req.body.title
+    const genre = req.body.genre
+    const description = req.body.description
+    //const gameID = req.body.gameID
+
+    const game = models.Games.build({
+        title: title,
+        genre: genre,
+        description: description
+        //gameID: gameID
+    })
+
+    let savedGame = await game.save()
+    if (savedGame != null) {
+        res.json({ success: true })
+    }
+})
+
+app.delete('/api/videogames/:gameId', (req, res) => {
+
+    const gameId = parseInt(req.params.gameId)
+
+    models.Games.destroy({
+        where: {
+            id: gameId
+        }
+    }).then(_ => {
+        res.json({ success: true })
+    })
+
+})
+
+
 
 
 
