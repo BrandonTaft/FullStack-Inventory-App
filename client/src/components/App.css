@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+.active .navBar{
+  display: none
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

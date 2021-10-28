@@ -1,7 +1,9 @@
 
 import { useEffect, useState } from 'react'
 import './App.css'
-import './Navbar.css'
+
+import Navbar from './Navbar';
+import Menu from './Menu';
 
 function AllGames(props) {
 
@@ -39,6 +41,9 @@ function AllGames(props) {
         return (
       
         <div >
+          
+            <Menu />
+            <Navbar />
             {gameItems}
         </div>
 

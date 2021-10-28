@@ -29,9 +29,9 @@ function Navbar() {
             </div>
             <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
                
-                <NavLink to="/"id="a" activeClassName="active-link" onClick={() => closeMenu()} exact>Logout</NavLink>
+                <NavLink to="/logout"id="a" activeClassName="active-link" onClick={() => closeMenu()} exact>Logout</NavLink>
                 <NavLink to="/home"id="a" activeClassName="active-link" onClick={() => closeMenu()} exact>Home</NavLink>
-                <NavLink to="/AddGame"id="a" activeClassName="active-link" onClick={() => closeMenu()} exact>AddGame</NavLink>
+                <NavLink to="/addgame"id="a" activeClassName="active-link" onClick={() => closeMenu()} exact>AddGame</NavLink>
 
 
 

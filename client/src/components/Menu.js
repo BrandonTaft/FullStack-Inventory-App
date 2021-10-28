@@ -11,7 +11,7 @@ function Menu() {
 
             <NavLink to="/logout" className='inactive'>Logout</NavLink>
             <NavLink to="/home" className='inactive' >Home</NavLink>
-            <NavLink to="/AddGame" className='inactive'>Add A Game</NavLink>
+            <NavLink to="/addgame" className='inactive'>Add A Game</NavLink>
                        
                 
 

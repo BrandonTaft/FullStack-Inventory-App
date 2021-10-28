@@ -1,4 +1,5 @@
-
+import Navbar from './Navbar';
+import Menu from './Menu';
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
@@ -39,12 +40,16 @@ function AddGame(props) {
             
 
     return (
+        <div> 
+            <Menu />
+            <Navbar />
             <div id = "boxes">
                 <h1>ADD GAME HERE</h1>
                 <input className= "textbox" type="text" name="title" onChange={handleAddGame} placeholder="Game Title" /><br></br>
                 <input className= "textbox" type="text" name="genre" onChange={handleAddGame} placeholder="Genre" /><br></br>
                 <textarea  id = 'description' className= "textbox" type="text" name="description" onChange={handleAddGame} placeholder="Description" /><br></br>
                 <button className= "button" onClick={postTODB}>Add Game</button>
+            </div>
             </div>
         )
     

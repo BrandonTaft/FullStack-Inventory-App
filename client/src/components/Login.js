@@ -29,6 +29,7 @@ function Login(props) {
         .then(result => {
             if(result.success == true) {
                 localStorage.setItem('jsonwebtoken', result.token) 
+                localStorage.setItem('username', result.username) 
                 props.history.push('/home')
                 console.log(result)
             }
@@ -45,7 +46,7 @@ function Login(props) {
 
     return (
         <div id = "boxes">
-            <h1>Login Here</h1>
+            <h1>Login</h1>
             <input className= "textbox" type = "text" name = "username" onChange = {handleLoginChange} placeholder = "User name" /><br></br>
             <input className= "textbox" type = "password" name = "password" onChange = {handleLoginChange} placeholder = "Password" /><br></br>
             <button className= "button" onClick= {handleLoginButton}>Login</button><br></br>

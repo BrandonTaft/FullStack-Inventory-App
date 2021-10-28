@@ -7,7 +7,7 @@ import AllGames from './AllGames';
 
 
 
-function App() {
+function App(props) {
 
   //useEffect is hook that allows component to use state and must be imported
   //games will bevalue of state
@@ -22,7 +22,7 @@ function App() {
 
     //gets token out of storage
   const token = localStorage.getItem('jsonwebtoken')
-
+   
     fetch('http://localhost:8080/api/videogames',{
             method: 'GET', 
             headers: {
@@ -31,8 +31,12 @@ function App() {
         })
       .then(response => response.json())
       .then(games => {
+        if(games.success == false) {
+          props.history.push('/')
+        }else{
         console.log(games)
         setGames(games)
+        }
       })
   }
 
