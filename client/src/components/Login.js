@@ -35,7 +35,7 @@ function Login(props) {
             }
              
             else{
-                window.alert('HMMM...ARE YOU SURE THIS IS YOUR ACCOUNT!!!!')
+                window.alert('HMMM...ARE YOU SURE YOU SHOULD BE HERE?')
             }
         })
     }
@@ -46,11 +46,11 @@ function Login(props) {
 
     return (
         <div id = "boxes">
-            <h1>Login</h1>
+            <h3 id="title">Login</h3>
             <input className= "textbox" type = "text" name = "username" onChange = {handleLoginChange} placeholder = "User name" /><br></br>
             <input className= "textbox" type = "password" name = "password" onChange = {handleLoginChange} placeholder = "Password" /><br></br>
-            <button className= "button" onClick= {handleLoginButton}>Login</button><br></br>
-            Not A Member Yet?<NavLink to = "/register">Register Here</NavLink>
+            <button className= "button" onClick= {handleLoginButton}>Login</button>
+           <NavLink id='regLink' to = "/register">Register</NavLink>
         </div>
     )
 }

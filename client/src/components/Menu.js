@@ -1,8 +1,4 @@
-
-
 import { NavLink } from "react-router-dom";
-import './Menu.css'
-
 
 
 function Menu() {
@@ -12,10 +8,6 @@ function Menu() {
             <NavLink to="/logout" className='inactive'>Logout</NavLink>
             <NavLink to="/home" className='inactive' >Home</NavLink>
             <NavLink to="/addgame" className='inactive'>Add A Game</NavLink>
-                       
-                
-
-
 
         </div>
     )

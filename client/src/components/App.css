@@ -1,97 +1,311 @@
-.App {
-  text-align: center;
+
+/* Menu and Navbar */
+
+.navBar {
+  position: relative;
+  margin-bottom: 21%;
 }
+
+.navBar button {
+  position: fixed;
+  top: 20px;
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;;
+  border: none;
+}
+
+.menuNav {
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  max-width: 290px;
+  z-index: 9;
+}
+
+.menuNav.showMenu {
+  background: green;
+  width: 100%;
+  height: fit-content;
+}
+
+a {
+  display: block;
+  padding: 10px 40px;
+  text-decoration: none;
+  color: #3fffd2;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.menuNav li:first-child {
+  margin-top: 7rem;
+}
+
+#buttonBox{
+  height: 50px;
+}
+
+#container{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(34, 87, 34);
+  color: white;
+  font-size: xx-large;
+  padding: 3%
+}
+
+.inactive{
+  color: white;
+  text-decoration: none;
+}
+
+.inactive{
+  color: white;
+  text-decoration: none;
+}
+
 .active .navBar{
   display: none
 }
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+#title{
+  margin-top:5%
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#regLink{
+  color:blue;
+  font-size: x-large;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 body{
   color:rgb(34, 87, 34);
   font-size: xx-large;
 }
 
-	.textbox { 
-    background: white; 
-    border: 1px solid rgb(34, 87, 34); 
-    border-radius: 5px; 
-    box-shadow: 0 0 5px 3px rgb(34, 87, 34); 
-    color: rgb(34, 87, 34); 
-    outline: none; 
-    height:23px; 
-    width: 25em; 
-    margin-right: 10px;
-  } 
+.textbox { 
+  background: white; 
+  border: 1px solid rgb(34, 87, 34); 
+  border-radius: 5px; 
+  box-shadow: 0 0 5px 3px rgb(34, 87, 34); 
+  color: rgb(34, 87, 34); 
+  outline: none; 
+  height:30px; 
+  width: 25em; 
+  margin-right: 10px;
+} 
 
-  .button{
-    background: rgb(34, 87, 34);
-   
-    border: 1px solid rgb(34, 87, 34); 
-    border-radius: 5px; 
-    box-shadow: 0 0 5px 3px rgb(34, 87, 34)y; 
-    color:white; 
-    outline: none; 
-    height:23px; 
-    width: 60px; 
-    height: 30px;
-    margin: 10px;
+.button{
+  background: rgb(34, 87, 34);
+  border: 1px solid rgb(34, 87, 34); 
+  border-radius: 5px; 
+  box-shadow: 0 0 5px 3px rgb(34, 87, 34)y; 
+  color:white; 
+  outline: none; 
+  height:23px; 
+  width: 100px; 
+  height: 30px;
+  margin: 10px;
+  padding: initial;
+  font-size: large;
+}
 
+#boxes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  padding: 3%;
+  border:solid;
+  border-color:#225722 ;
+  border-radius: 25px;
+  margin: 25%;
+  margin-top: 10%;
+}
+
+#reg-boxes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  width:55%;
+  border:solid;
+  border-color:#225722 ;
+  border-radius: 25px;
+  margin:auto;
+  margin-top: 8%;
+}
+
+#add-reg-boxes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  width:55%;
+  border:solid;
+  border-color:#225722 ;
+  border-radius: 25px;
+  margin:auto;
+  margin-top: 2%;
+}
+
+.add-textbox { 
+  background: white; 
+  border: 1px solid rgb(34, 87, 34); 
+  border-radius: 5px; 
+  box-shadow: 0 0 5px 3px rgb(34, 87, 34); 
+  color: rgb(34, 87, 34); 
+  outline: none; 
+  height:33px; 
+  width: 50%; 
+  margin-right: 10px;
+} 
+
+.add-button{
+  background: rgb(34, 87, 34);
+  border: 1px solid rgb(34, 87, 34); 
+  border-radius: 5px; 
+  box-shadow: 0 0 5px 3px rgb(34, 87, 34)y; 
+  color:white; 
+  outline: none; 
+  height:23px; 
+  width: 20%; 
+  height: 30px;
+  margin: 30px;
+  padding: initial;
+}
+
+#add-description{
+  height: 15em;
+  width: 60%;
+}
+
+#gameList{
+  border: solid;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 5%;
+  
+  margin-top: 2%;
+}
+
+#description{
+  height: 15em;
+  width: 25em;
+}
+  
+@media (max-device-width:600px) {
+  #container{
+    display: none;
   }
 
   #boxes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 50%;
-    padding: 3%;
-   
-
+    margin: auto;
+    width: 80%;
+    margin-top: 25%;
   }
 
-  #gameList{
-    border: solid;
-    padding: 20px;
-   
-  }
-
-  #title{
-    margin-top: 100px;
+  #reg-boxes{
+    width: 90%;
+    margin-top: 20%;
+  }  
+  
+  .textbox{
+    width:70%;
   }
 
   #description{
+    width:70%;
+  }
+
+  #regLink{
+    font-size: large;
+  }
+
+  #addGame{
+    margin-top: 6%;
+    margin-bottom: 6%;
+  }
+
+  #add-reg-boxes{
+    width: 90%;
+    margin-top: 20%;
+  }
+
+  .add-textbox{
+    width: 70%;
+  }
+
+  #add-description{
     height: 15em;
-    width: 25em;
+    width: 80%;
+  }
+
+  .add-button{
+    width: 35%;
+  }
+
+}
+
+@media (min-device-width:601px) and (max-device-width:1400px) {
+  .navBar{
+    display: none;
   }
   
+  #gameList{
+    margin-left: 5%;
+  }
+
+  #boxes{
+    margin: auto;
+    margin-top: 25%;
+    width: 80%;
+  }
+
+  #reg-boxes{
+    width: 90%;
+    margin-top: 20%;
+    height: 66%;
+  }
+
+  #add-reg-boxes{
+    width: 90%;
+    margin-top: 20%;
+    height: 66%;
+  }
+
+  .textbox{
+    width:60%;
+    height: 40px;
+  }
+  
+}
+
+@media (min-device-width:1401px){
+  .navBar{
+    display: none;
+  }
+}
+
+
+@media (min-device-height:812px) and (max-device-height:825px){
+  #add-reg-boxes{
+    margin-top: 40%;
+  }
+
+  #boxes{
+    margin-top: 40%;
+  }
+
+  #reg-boxes{
+    margin-top: 40%;
+  }
+
+}

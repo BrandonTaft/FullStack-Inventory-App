@@ -1,8 +1,7 @@
 import Navbar from './Navbar';
 import Menu from './Menu';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
-
 
 
 function AddGame(props) {
@@ -11,48 +10,49 @@ function AddGame(props) {
 
     const handleAddGame = (e) => {
         setGame({
-           
+
             ...game,
-             [e.target.name]: e.target.value
-             
+            [e.target.name]: e.target.value
+
         })
     }
 
-   
-        
+
+
     const postTODB = () => {
-        console.log(game)
+
+
         fetch("http://localhost:8080/api/videogames", {
-            method: 'POST', 
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                }, 
+            },
             body: JSON.stringify(game)
         }).then(response => response.json())
-        .then(result => {
-            if(result.success) {
-                props.history.push('/home')
+            .then(result => {
+                if (result.success) {
+                    props.history.push('/home')
                 }
-        })
-    }                                                         
+            })
+    }
 
 
-            
+
 
     return (
-        <div> 
+        <div>
             <Menu />
             <Navbar />
-            <div id = "boxes">
-                <h1>ADD GAME HERE</h1>
-                <input className= "textbox" type="text" name="title" onChange={handleAddGame} placeholder="Game Title" /><br></br>
-                <input className= "textbox" type="text" name="genre" onChange={handleAddGame} placeholder="Genre" /><br></br>
-                <textarea  id = 'description' className= "textbox" type="text" name="description" onChange={handleAddGame} placeholder="Description" /><br></br>
-                <button className= "button" onClick={postTODB}>Add Game</button>
+            <div id="add-reg-boxes">
+                <h3 id="addGame">ADD GAME</h3>
+                <input className="add-textbox" type="text" name="title" onChange={handleAddGame} placeholder="Game Title" /><br></br>
+                <input className="add-textbox" type="text" name="genre" onChange={handleAddGame} placeholder="Genre" /><br></br>
+                <textarea id='add-description' className="textbox" type="text" name="description" onChange={handleAddGame} placeholder="Description" />
+                <button className="add-button" onClick={postTODB}>SUBMIT</button>
             </div>
-            </div>
-        )
-    
+        </div>
+    )
+
 
 }
 

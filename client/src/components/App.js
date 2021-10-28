@@ -31,7 +31,7 @@ function App(props) {
         })
       .then(response => response.json())
       .then(games => {
-        if(games.success == false) {
+        if(games.success === false) {
           props.history.push('/')
         }else{
         console.log(games)
