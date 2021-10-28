@@ -1,4 +1,3 @@
-
 import Navbar from './Navbar';
 import Menu from './Menu';
 import './App.css'
@@ -12,11 +11,9 @@ function AllGames(props) {
             .then(result => {
                 if (result.success) {
                     window.location.reload(false)
-
                 }
             })
     }
-
 
 
     const gameItems = props.games.map(game => {
@@ -31,16 +28,12 @@ function AllGames(props) {
     })
 
     return (
-
         <div >
-
             <Menu />
             <Navbar />
             {gameItems}
         </div>
-
     )
-
 }
 
 export default AllGames

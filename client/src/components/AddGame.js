@@ -10,18 +10,12 @@ function AddGame(props) {
 
     const handleAddGame = (e) => {
         setGame({
-
             ...game,
             [e.target.name]: e.target.value
-
         })
     }
 
-
-
     const postTODB = () => {
-
-
         fetch("http://localhost:8080/api/videogames", {
             method: 'POST',
             headers: {
@@ -37,8 +31,6 @@ function AddGame(props) {
     }
 
 
-
-
     return (
         <div>
             <Menu />
@@ -52,10 +44,7 @@ function AddGame(props) {
             </div>
         </div>
     )
-
-
 }
-
 
 
 export default AddGame

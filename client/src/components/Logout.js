@@ -2,6 +2,7 @@ import { Redirect } from "react-router-dom";
 
 
 function Logout(props) {
+
     localStorage.clear();
 
     return (

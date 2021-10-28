@@ -1,25 +1,24 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 
-// Utils
 
-const PrivateRoutes = ({ component: Component, ...rest }) => {  
-  var session_token=localStorage.getItem('jsonwebtoken')
+const PrivateRoutes = ({ component: Component, ...rest }) => {
+  var session_token = localStorage.getItem('jsonwebtoken')
 
   return (
     <Route {...rest} render={props => (
-     session_token !== null ? (
-      < Component {...rest} {...props} />
+      session_token !== null ? (
+        < Component {...rest} {...props} />
       ) : (
-            <Redirect to={{
-              pathname: '/',
-              state: { from: props.location }
-              }}
-            />
-          )
-      )} 
+        <Redirect to={{
+          pathname: '/',
+          state: { from: props.location }
+        }}
+        />
+      )
+    )}
     />
   )
-   };
+};
 
 export default PrivateRoutes;
