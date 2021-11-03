@@ -5,7 +5,7 @@ import './App.css'
 function AllGames(props) {
 
     const handleGameDelete = (game) => {
-        fetch(`http://localhost:8080/api/videogames/${game.id}`, {
+        fetch(`http://localhost:8081/api/videogames/${game.id}`, {
             method: 'DELETE'
         }).then(response => response.json())
             .then(result => {

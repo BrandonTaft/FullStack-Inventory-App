@@ -16,7 +16,7 @@ function App(props) {
     const getAllGames = () => {
       const token = localStorage.getItem('jsonwebtoken')
 
-      fetch('http://localhost:8080/api/videogames', {
+      fetch('http://localhost:8081/api/videogames', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`

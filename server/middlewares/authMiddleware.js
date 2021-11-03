@@ -15,8 +15,6 @@ function authenticate(req, res, next) {
          
          if(decoded) {
              const username = decoded.username 
-             console.log("username1:", username)
-             console.log("token:", decoded)
              const authUser = models.User.findOne({
         where: {
             username: username,
