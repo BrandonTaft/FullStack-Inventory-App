@@ -33,8 +33,10 @@
   <h1></h1>
   <h3 align= 'center'>What It Does</h3>
   <p align='center'>This is an inventory app with minimal styling that utilizes React for the front-end and Nodejs and Sequelize for the Back-end with a PostgresSQL database. It allows the user to register and login with Bcrypt encryption and JWT authentication. Authentication is used on both the back-end and the client side. The user can then add and delete inventory with a range of datatypes. It was made as a practice project and is set up for a video game inventory.  </p>
-  <a href="https://mydevsite.surge.sh/">
-  <img  width="" height="" src="https://github.com/BrandonTaft/FullStack-Inventory-App/blob/master/fullstackcap.png" />
+<div align='center'>
+  <a align="center" href="https://mydevsite.surge.sh/">
+  <img align="center" width="" height="" src="https://github.com/BrandonTaft/FullStack-Inventory-App/blob/master/fullstackcap.png" />
   </a> 
+  </div>  
   <h3 align="center">Thank You For Stopping By!</h3> 
 <p align='center'>For enquiries or empolyment oppurtunities, please reach out at<a href="mailto:btaftcan@gmail.com">btaftcan@gmail.com</a> or over on <a href="https://www.linkedin.com/in/brandonmtaft">LinkedIn</a>.</p>
