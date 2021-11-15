@@ -36,7 +36,7 @@
   <br />
 <h2 align='center'><a align='center' href="https://brandontaft.surge.sh" >Check It Out In My Portfolio</a></h2>  
  
-  <p align='center'>This is an inventory app with minimal styling that utilizes React for the front-end and Nodejs and Sequelize for the Back-end with a PostgresSQL database. It allows the user to register and login with Bcrypt encryption and JWT authentication. Authentication is used on both the back-end and the client side. The user can then add and delete inventory with a range of datatypes. It was made as a practice project and is set up for a video game inventory.  </p>
+  <p align='center'>This is an Inventory Tracker with minimal styling that utilizes React for the front-end and Nodejs and Sequelize for the Back-end with a PostgresSQL database. It allows the user to register and login with Bcrypt encryption and JWT authentication. Authentication is used on both the back-end and the client side. The user can then add and delete inventory with a range of datatypes. It was made as a practice project and is set up for a video game inventory.  </p>
   <br />
 <div align='center'>
   <a align="center" href="https://mydevsite.surge.sh/">
